@@ -1,6 +1,3 @@
-# melkart-magento2-product-audit-log
-
-
 # Melkart Product Audit Log (Magento 2)
 
 Magento 2 module that logs backend changes made on product edit pages.
