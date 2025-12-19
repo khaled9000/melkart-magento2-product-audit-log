@@ -1,6 +1,3 @@
-# melkart-magento2-product-audit-log
-
-
 # Melkart Product Audit Log (Magento 2)
 
 Magento 2 module that logs backend changes made on product edit pages.
@@ -33,18 +30,12 @@ Designed for audit, traceability and ERP synchronization use cases.
 
 ## Installation
 
-### Option 1: Manual installation
+### Manual installation
 
 ```bash
 mkdir -p app/code/Melkart
 cd app/code/Melkart
 git clone git@github.com:Melkart/melkart-magento2-product-audit-log.git ProductAuditLog
-```
-
-### Option 2: Composer installation
-
-```bash
-composer require melkart/product-audit-log
 ```
 
 ## Excluded attributes
