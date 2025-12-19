@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author  Kallel Khaled
+ * @created 2025-12-19
+ * @package Melkart_ProductAuditLog
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="catalog_product_save_after">
+        <observer name="melkart_product_flux_logger_observer"
+                  instance="Melkart\ProductAuditLog\Observer\ProductAuditLogger"/>
+    </event>
+        
+
+</config>

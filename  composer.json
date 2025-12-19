@@ -1,0 +1,24 @@
+{
+  "name": "melkart/product-audit-log",
+  "description": "Magento 2 module that logs backend product changes for audit and traceability purposes",
+  "type": "magento2-module",
+  "license": "MIT",
+  "authors": [
+    {
+      "name":  "Kallel Khaled",
+      "email": "kallelkhaled3@gmail.com",
+      "role":  "Consultant Magento 1 & 2"
+    }
+  ],
+  "require": {
+    "magento/framework": "^103.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Melkart\\ProductAuditLog\\": ""
+    }
+  }
+}

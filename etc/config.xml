@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author  Kallel Khaled
+ * @created 2025-12-19
+ * @package Melkart_ProductAuditLog
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <product_audit_log>
+            <general>
+                <enable>0</enable>
+            </general>
+        </product_audit_log>
+    </default>
+</config>

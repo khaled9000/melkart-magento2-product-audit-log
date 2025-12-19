@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author  Kallel Khaled
+ * @created 2025-12-19
+ * @package Melkart_ProductAuditLog
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Melkart\ProductAuditLog\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Melkart\ProductAuditLog\Logger\MelkartLogger">
+        <arguments>
+            <argument name="name" xsi:type="string">melkart_logger</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="system" xsi:type="object">Melkart\ProductAuditLog\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>
