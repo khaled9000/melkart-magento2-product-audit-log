@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author  Kallel Khaled
+ * @created 2025-12-19
+ * @package Melkart_ProductAuditLog
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+        <tab id="Melkart" translate="label" sortOrder="901" class="melkart-extensions">
+            <label>Melkart Extensions</label>
+        </tab>
+
+        <section id="product_audit_log" translate="label" sortOrder="10"
+                 showInDefault="1" showInWebsite="0" showInStore="0">
+            <label> Product Admin Logger </label>
+            <tab>Melkart</tab>
+            <resource>Melkart_ProductAuditLogger::configuration</resource>
+
+            <group id="general" translate="label" sortOrder="10"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+
+                <field id="enable" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            
+        </section>
+    </system>
+</config>
