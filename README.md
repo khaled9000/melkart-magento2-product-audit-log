@@ -13,6 +13,8 @@ Designed for audit, traceability and ERP synchronization use cases.
 - Stores old and new values
 - Logs date and time of the modification
 - ACL support to control access to audit logs
+- Proper handling of select and multiselect product attributes
+- Logs the administrator user who performed product changes
 
 ---
 

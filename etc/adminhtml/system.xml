@@ -27,10 +27,60 @@
 
                 <field id="enable" translate="label" type="select" sortOrder="10"
                        showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Enable module</label>
+                    <label>Enable Module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
+
+            <group id="product_logger_options" translate="Label" sortOrder="20"
+                   showInDefault="1" showInWebsite="0" showInStore="0">
+                <label> Product Logger Option </label>
+
+                <field id="enable_product_trace" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Product Traceability</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment> Records product changes in audit logs. </comment>
+                </field>
+
+                <field id="enable_admin_trace" translate="label comment" type="select" sortOrder="11"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Administrator Traceability</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment> Records the admin user responsible for product changes in audit logs. </comment>
+                    <depends>
+                        <field id="product_audit_log/product_logger_options/enable_product_trace">1</field>
+                    </depends>
+                </field>
+
+                <field id="product_excluded_attributes" translate="label comment" type="multiselect" sortOrder="12"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Excluded Product Attributes</label>
+                    <source_model>Melkart\ProductAuditLog\Model\Config\Source\ProductExcludedAttributes</source_model>
+                    <comment>
+                        Select product attributes that should be excluded from audit logs.
+                        These attributes are excluded because they are system-managed, frequently updated, or generate excessive noise in audit logs.
+                        By default, all attributes are selected and therefore excluded from logging.
+                    </comment>
+                    <depends>
+                        <field id="product_audit_log/product_logger_options/enable_product_trace">1</field>
+                    </depends>
+                </field>
+
+                <field id="product_website_ids" translate ="label comment" type="select" sortOrder="13"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label> Logging Website Ids </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enables auditing of product-to-website assignment changes.
+                        This option is intended for advanced multi-website audit use cases.
+                    </comment>
+                    <depends>
+                        <field id="product_audit_log/product_logger_options/enable_product_trace">1</field>
+                    </depends>
+                </field>
+            </group>
+                
             
         </section>
     </system>
