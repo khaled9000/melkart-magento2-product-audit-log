@@ -12,6 +12,7 @@ Designed for audit, traceability and ERP synchronization use cases.
 - Detects modified attributes before and after save
 - Stores old and new values
 - Logs date and time of the modification
+- ACL support to control access to audit logs
 
 ---
 
