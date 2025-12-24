@@ -14,6 +14,12 @@
             <general>
                 <enable>1</enable>
             </general>
+            <product_logger_options>
+                <enable_product_trace>1</enable_product_trace>
+                <enable_admin_trace>0</enable_admin_trace>
+                <product_excluded_attributes>created_at,media_gallery,quantity_and_stock_status,updated_at</product_excluded_attributes>
+                <product_website_ids>0</product_website_ids>
+            </product_logger_options>
         </product_audit_log>
     </default>
 </config>
